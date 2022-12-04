@@ -1,22 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
     android:orientation="vertical">
 
     <LinearLayout
+        android:baselineAligned="false"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal"
-        android:layout_gravity=""
         android:layout_weight="2.3">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1">
+
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -24,14 +25,18 @@
                 android:layout_gravity="center"
                 android:layout_margin="5dp"
                 app:cardBackgroundColor="@color/white">
+
                 <ImageView
                     android:id="@+id/constellationImage"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:contentDescription="@string/constellation_image"
                     android:src="@drawable/imege"
                     android:scaleType="centerCrop"
                     android:layout_gravity="center"/>
+
             </androidx.cardview.widget.CardView>
+
         </LinearLayout>
 
 
@@ -53,7 +58,7 @@
                     android:layout_height="40sp"
                     android:gravity="bottom"
                     android:fontFamily="@font/comfortaa_bold"
-                    android:text="Пошук..."
+                    android:text="@string/finding"
                     android:autoSizeTextType="uniform"
                     android:autoSizeMinTextSize="10sp"
                     android:autoSizeMaxTextSize="40sp"
@@ -66,95 +71,98 @@
                     android:layout_gravity="center"
                     android:textSize="14sp"
                     android:text="" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:gravity="start|center_vertical"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="5dp">
+
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_weight="1"
-                android:gravity="center">
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/star"/>
-                <TextView
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="start|center_vertical"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="5dp">
+
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:id="@+id/brightestStar"
-                    android:text="..."
-                    android:gravity="center"
-                    android:textSize="15sp"
-                    android:fontFamily="@font/comfortaa_bold"/>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_weight="1"
-                android:gravity="center">
-                <ImageView
-                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/notepad_bold"/>
-                <TextView
+                    android:orientation="horizontal"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/brightestStar"
+                        android:text="@string/triple_dot"
+                        android:gravity="center"
+                        android:textSize="15sp"
+                        android:fontFamily="@font/comfortaa_bold"
+                        app:drawableStartCompat="@drawable/star" />
+
+                </LinearLayout>
+
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:id="@+id/researcher"
-                    android:text="..."
-                    android:gravity="center"
-                    android:textSize="15sp"
-                    android:fontFamily="@font/comfortaa_bold"/>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_weight="1"
-                android:gravity="center">
-                <ImageView
-                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/area"/>
-                <TextView
+                    android:orientation="horizontal"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/researcher"
+                        android:text="@string/triple_dot"
+                        android:gravity="center"
+                        android:textSize="15sp"
+                        android:fontFamily="@font/comfortaa_bold"
+                        app:drawableStartCompat="@drawable/notepad_bold"/>
+
+                </LinearLayout>
+
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:id="@+id/area"
-                    android:text="..."
-                    android:gravity="center"
-                    android:textSize="15sp"
-                    android:fontFamily="@font/comfortaa_bold"/>
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/area"
+                        android:text="@string/triple_dot"
+                        android:gravity="center"
+                        android:textSize="15sp"
+                        android:fontFamily="@font/comfortaa_bold"
+                        app:drawableStartCompat="@drawable/area"/>
+
+                </LinearLayout>
+
             </LinearLayout>
 
         </LinearLayout>
+
     </LinearLayout>
 
-    </LinearLayout>
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@color/black"/>
-    <LinearLayout
+
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:padding="5dp"
         android:layout_weight="1">
-        <ScrollView
+
+        <TextView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="5dp">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="30sp"
-                android:id="@+id/description"
-                android:text="Опис..."/>
-        </ScrollView>
-    </LinearLayout>
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:id="@+id/description"
+            android:text="@string/loadingDescription"/>
+
+    </ScrollView>
+
 </LinearLayout>

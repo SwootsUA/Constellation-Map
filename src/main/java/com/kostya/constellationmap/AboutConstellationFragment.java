@@ -13,9 +13,9 @@ import androidx.fragment.app.FragmentTransaction;
 import com.kostya.constellationmap.db.DB_Helper;
 
 public class AboutConstellationFragment extends Fragment implements View.OnClickListener {
+    private int imgId;
     private String dataName;
     private DB_Helper db_helper;
-    private int imgId;
 
     public AboutConstellationFragment(){}
 

@@ -6,5 +6,13 @@
     <string name="year">2022 р.</string>
     <string name="about_app_text">Застосунок надає інфорацію про 88, офіційно визнаних сузір\'їв, а також надає їх зображення та положення на мапі неба.</string>
     <string name="developer">Розробник:\nЗахарченко Костянтин</string>
-    <string name="placeHolder_listObjectText">Сузір\'я</string>
+    <string name="placeHolder">Сузір\'я</string>
+    <string name="loadingDescription">Опис...</string>
+    <string name="triple_dot">...</string>
+    <string name="finding">Пошук...</string>
+    <string name="constellation_image">Constellation Image</string>
+    <string name="star">star</string>
+    <string name="notepad">notepad</string>
+    <string name="area">area</string>
+    <string name="resize_arrow">resize arrow image</string>
 </resources>

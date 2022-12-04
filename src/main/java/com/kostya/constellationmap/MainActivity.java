@@ -4,9 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
 import android.app.FragmentManager;
 import android.os.Bundle;
-import android.util.Log;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 
 public class MainActivity extends AppCompatActivity {
     @Override

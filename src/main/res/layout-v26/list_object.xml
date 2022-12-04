@@ -10,12 +10,13 @@
         android:layout_width="72dp"
         android:layout_height="72dp"
         android:id="@+id/imageId"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"
+        android:contentDescription="@string/constellation_image"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/placeHolder_listObjectText"
+        android:text="@string/placeHolder"
         android:autoSizeTextType="uniform"
         android:autoSizeMinTextSize="10sp"
         android:autoSizeMaxTextSize="40sp"

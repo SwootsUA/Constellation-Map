@@ -7,15 +7,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import androidx.fragment.app.Fragment;
 
 public class AboutConsImage extends Fragment {
-    private String aboutImgName;
-    private int aboutImgId;
-    private ScaleGestureDetector mScaleGestureDetector;
-    private float mScaleFactor = 1.0f;
     private ImageView img;
+    private int aboutImgId;
+    private String aboutImgName;
+    private float mScaleFactor = 1.0f;
+    private ScaleGestureDetector mScaleGestureDetector;
 
     public AboutConsImage() {}
 
@@ -24,7 +23,6 @@ public class AboutConsImage extends Fragment {
         mScaleGestureDetector = new ScaleGestureDetector(getContext(), new ScaleListener());
 
         TextView text = view.findViewById(R.id.aboutImgName);
-
         img = view.findViewById(R.id.img);
 
         text.setText(aboutImgName);
@@ -43,8 +41,6 @@ public class AboutConsImage extends Fragment {
         aboutImgId = imgId;
     }
 
-
-
     private class ScaleListener extends ScaleGestureDetector.SimpleOnScaleGestureListener {
         @Override
         public boolean onScale(ScaleGestureDetector scaleGestureDetector){
@@ -55,6 +51,4 @@ public class AboutConsImage extends Fragment {
             return true;
         }
     }
-
-
 }
