@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Карта сузір\'їв</string>
+    <string name="choose">Обрати сузір\'я</string>
+    <string name="about_app">Про застосунок</string>
+    <string name="choose_text">Оберіть сузір\'я</string>
+    <string name="year">2022 р.</string>
+    <string name="about_app_text">Застосунок надає інфорацію про 88, офіційно визнаних сузір\'їв, а також надає їх зображення та положення на мапі неба.</string>
+    <string name="developer">Розробник:\nЗахарченко Костянтин</string>
+    <string name="placeHolder_listObjectText">Сузір\'я</string>
+</resources>
