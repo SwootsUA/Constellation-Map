@@ -11,8 +11,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // завантаження фрагменту меню
         LoadFragment loadFragment = new LoadFragment();
-
         try{
             FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.MainFragment, loadFragment);
@@ -21,7 +21,6 @@ public class MainActivity extends AppCompatActivity {
         catch (Exception exception) {
             exception.printStackTrace();
         }
-
     }
 
     @Override

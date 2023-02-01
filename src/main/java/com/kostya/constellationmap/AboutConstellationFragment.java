@@ -24,6 +24,7 @@ public class AboutConstellationFragment extends Fragment implements View.OnClick
         // inflater - XML -> Java
         View view = inflater.inflate(R.layout.about_constellation_fragment, container, false);
 
+        // початкова ініціалізація об'єктів фрагменту
         TextView uaName = view.findViewById(R.id.ukrainianName);
         TextView latName = view.findViewById(R.id.latinName);
         TextView bStar = view.findViewById(R.id.brightestStar);
@@ -34,7 +35,9 @@ public class AboutConstellationFragment extends Fragment implements View.OnClick
         constellationImage.setOnClickListener(this);
 
         SQLiteDatabase dataBase = db_helper.getReadableDatabase();
-        Cursor cursor = dataBase.rawQuery("Select name, Latin_name, Brightest_Star, Researchers.Researcher, Area, ImageId, Description From Info INNER JOIN Researchers ON Researchers._id = Info.id_Described_by  WHERE name LIKE + '" + dataName + "';", null);
+        Cursor cursor = dataBase.rawQuery(
+                "Select name, Latin_name, Brightest_Star, Researchers.Researcher, Area, ImageId, Description From Info " +
+                    "INNER JOIN Researchers ON Researchers._id = Info.id_Described_by  WHERE name LIKE + '" + dataName + "';", null);
 
         cursor.moveToFirst();
         uaName.setText(cursor.getString(0));
@@ -52,6 +55,7 @@ public class AboutConstellationFragment extends Fragment implements View.OnClick
         return view;
     }
 
+    // приймання назви сузір'я для пошуку у бд та об'єкт бд_хелпер
     public void setData(String name, DB_Helper helper) {
         dataName = name;
         db_helper = helper;

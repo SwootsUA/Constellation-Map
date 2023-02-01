@@ -36,11 +36,13 @@ public class AboutConsImage extends Fragment {
         return view;
     }
 
+    // встановлення назви та зображення на фрагменті
     public void setContent(String name, int imgId){
         aboutImgName = name;
         aboutImgId = imgId;
     }
 
+    // зміна розміру зображення у відповідь на онТачІвент
     private class ScaleListener extends ScaleGestureDetector.SimpleOnScaleGestureListener {
         @Override
         public boolean onScale(ScaleGestureDetector scaleGestureDetector){

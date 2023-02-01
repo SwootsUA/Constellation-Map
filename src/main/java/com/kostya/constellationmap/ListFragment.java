@@ -31,6 +31,7 @@ public class ListFragment extends Fragment implements View.OnClickListener {
         SQLiteDatabase dataBase = db_helper.getReadableDatabase();
         Cursor cursor = dataBase.rawQuery("Select name, ImageId From Info;", null);
 
+        // додавання усіх сузір'їв з бд на фрагмент
         View listObject;
         while(cursor.moveToNext()){
             listObject = getLayoutInflater().inflate(R.layout.list_object, listContainer, false);

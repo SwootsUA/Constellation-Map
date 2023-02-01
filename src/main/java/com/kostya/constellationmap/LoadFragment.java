@@ -20,6 +20,7 @@ public class LoadFragment extends Fragment implements View.OnClickListener {
         // inflater - XML -> Java
         View view = inflater.inflate(R.layout.load_fragment, container, false);
 
+        // ініціалізація кнопок
         Button btn_choose = view.findViewById(R.id.btn_choose_menuF);
         Button btn_about = view.findViewById(R.id.btn_about_menuF);
 
@@ -36,6 +37,7 @@ public class LoadFragment extends Fragment implements View.OnClickListener {
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.btn_choose_menuF:
+                // завантаження фрагменту "список сузір'їв"
                 try {
                     FragmentTransaction fragmentTransaction = getParentFragmentManager().beginTransaction();
                     fragmentTransaction.replace(R.id.MainFragment, listFragment);
@@ -47,6 +49,7 @@ public class LoadFragment extends Fragment implements View.OnClickListener {
                 }
                 break;
             case R.id.btn_about_menuF:
+                // завантаження фрагменту "про застосунок"
                 try {
                     FragmentTransaction fragmentTransaction = getParentFragmentManager().beginTransaction();
                     fragmentTransaction.replace(R.id.MainFragment, aboutAppFragment);
